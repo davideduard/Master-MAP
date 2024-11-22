@@ -28,3 +28,4 @@
 /Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/obj/Debug/net8.0/David_Eduard_Lab1.pdb
 /Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/obj/Debug/net8.0/David_Eduard_Lab1.genruntimeconfig.cache
 /Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/obj/Debug/net8.0/ref/David_Eduard_Lab1.dll
+/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/obj/Debug/net8.0/David_Eduard_Lab1.sourcelink.json
