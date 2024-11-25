@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/David_Eduard_Lab1.csproj": {}
+    "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab/David_Eduard_Lab1/David_Eduard_Lab1.csproj": {}
   },
   "projects": {
-    "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/David_Eduard_Lab1.csproj": {
+    "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab/David_Eduard_Lab1/David_Eduard_Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/David_Eduard_Lab1.csproj",
+        "projectUniqueName": "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab/David_Eduard_Lab1/David_Eduard_Lab1.csproj",
         "projectName": "David_Eduard_Lab1",
-        "projectPath": "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/David_Eduard_Lab1.csproj",
+        "projectPath": "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab/David_Eduard_Lab1/David_Eduard_Lab1.csproj",
         "packagesPath": "/Users/eduarddavid/.nuget/packages/",
-        "outputPath": "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab1/David_Eduard_Lab1/obj/",
+        "outputPath": "/Users/eduarddavid/workspace/master/MAP/David_Eduard_Lab/David_Eduard_Lab1/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -43,6 +43,30 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
