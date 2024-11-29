@@ -66,7 +66,8 @@ namespace David_Eduard_Lab1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GenreID"] = new SelectList(_context.Set<Genre>(), "GenreId", "GenreId", book.GenreID);
+            ViewData["GenreID"] = new SelectList(_context.Set<Genre>(), "GenreId", "GenreId", book.GenreID); 
+            ViewData["AuthorId"] = new SelectList(_context.Set<Author>(), "AuthorId", "AuthorId", book.AuthorId);
             return View(book);
         }
 
