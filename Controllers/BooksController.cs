@@ -22,8 +22,8 @@ namespace David_Eduard_Lab1.Controllers
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            var david_Eduard_Lab1Context = _context.Book.Include(b => b.Genre);
-            return View(await david_Eduard_Lab1Context.ToListAsync());
+            var LibraryContext = _context.Book.Include(b => b.Genre).Include(a => a.Author);
+            return View(await LibraryContext.ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -49,6 +49,7 @@ namespace David_Eduard_Lab1.Controllers
         public IActionResult Create()
         {
             ViewData["GenreID"] = new SelectList(_context.Set<Genre>(), "GenreId", "GenreId");
+            ViewData["AuthorId"] = new SelectList(_context.Set<Author>(), "AuthorId", "AuthorId");
             return View();
         }
 
@@ -57,7 +58,7 @@ namespace David_Eduard_Lab1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,Author,Price,GenreID")] Book book)
+        public async Task<IActionResult> Create([Bind("ID,Title,Author,Price,GenreID,AuthorId")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -83,6 +84,7 @@ namespace David_Eduard_Lab1.Controllers
                 return NotFound();
             }
             ViewData["GenreID"] = new SelectList(_context.Set<Genre>(), "GenreId", "GenreId", book.GenreID);
+            ViewData["AuthorId"] = new SelectList(_context.Set<Author>(), "AuthorId", "AuthorId", book.AuthorId);
             return View(book);
         }
 
@@ -91,7 +93,7 @@ namespace David_Eduard_Lab1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Author,Price,GenreID")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Author,Price,GenreID,AuthorId")] Book book)
         {
             if (id != book.ID)
             {
@@ -119,6 +121,7 @@ namespace David_Eduard_Lab1.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["GenreID"] = new SelectList(_context.Set<Genre>(), "GenreId", "GenreId", book.GenreID);
+            ViewData["AuthorId"] = new SelectList(_context.Set<Author>(), "AuthorId", "AuthorId", book.AuthorId);
             return View(book);
         }
 
